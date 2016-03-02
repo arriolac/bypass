@@ -1532,9 +1532,9 @@ parse_block(struct buf *ob, struct render *rndr,
 	while (beg < size) {
 		txt_data = data + beg;
 		end = size - beg;
-		if (data[beg] == '#')
-			beg += parse_atxheader(ob, rndr, txt_data, end);
-		else if (data[beg] == '<' && rndr->make.blockhtml
+		//if (data[beg] == '#')
+			//beg += parse_atxheader(ob, rndr, txt_data, end);
+		if (data[beg] == '<' && rndr->make.blockhtml
 			&& (i = parse_htmlblock(ob, rndr, txt_data, end)) != 0)
 			beg += i;
 		else if ((i = is_empty(txt_data, end)) != 0)

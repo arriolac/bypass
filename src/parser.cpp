@@ -41,11 +41,11 @@ struct mkd_renderer mkd_callbacks = {
 	NULL,                 // epilogue
 
 	/* block-level callbacks */
-	rndr_blockcode,       // block code
-	rndr_blockquote,      // block quote
+	NULL,       // block code
+	NULL,      // block quote
 	NULL,                 // block html
 	rndr_header,          // header
-	rndr_hrule,           // hrule
+	NULL,           // hrule
 	rndr_list,            // list
 	rndr_listitem,        // listitem
 	rndr_paragraph,       // paragraph
@@ -55,11 +55,11 @@ struct mkd_renderer mkd_callbacks = {
 
 	/* span-level callbacks */
 	rndr_autolink,        // autolink
-	rndr_codespan,        // codespan
+	NULL,        // codespan
 	rndr_double_emphasis, // double emphasis
 	rndr_emphasis,        // emphasis
-	rndr_image,           // image
-	rndr_linebreak,       // line break
+	NULL,           // image
+	NULL,       // line break
 	rndr_link,            // link
 	NULL,                 // raw html tag
 	rndr_triple_emphasis, // triple emphasis
